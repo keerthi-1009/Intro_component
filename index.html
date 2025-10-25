@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+      box-sizing: border-box;
+      font-family: 'Poppins','arial';
+      color: white;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    body{
+      background-image: url(images/bg-intro-desktop.png);
+      min-height: 100vh;
+      background-color:hsl(0, 100%, 74%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+
+    }
+
+    #container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 50px;
+      gap: 30px;
+
+    }
+    .first-phase {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+      max-width: 500px;
+    }
+
+        .first-phase h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .first-phase p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: white;
+      padding: 3px;
+      margin:0;
+    }
+
+    .second-phase {
+      margin: 15px;
+      padding: 20px;
+      
+    }
+
+    .box1 {
+      background-color: hsl(228, 45%, 44%);
+      padding: 15px 20px;
+      text-align: center;
+      margin: 30px auto;
+      border: 1px solid hsl(228, 45%, 44%);
+      border-radius: 10px;
+      max-width: 800px;
+      font-weight: 400;
+      
+    }
+
+    .box1 p {
+      color: hsl(246, 25%, 77%);
+    }
+
+    .box2 {
+      background-color: white;
+      border: 1px solid white;
+      border-radius: 10px;
+      margin: 30px auto;
+      padding: 30px;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+    
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .box2 p {
+      color: hsl(246, 25%, 77%);
+       text-align: center;
+      font-size: 0.9rem;
+    }
+    .box2 span {
+      color: hsl(0, 100%, 74%);
+      cursor: pointer;
+    }
+
+   input {
+     padding: 12px 15px;
+      border: 1px solid hsl(248, 32%, 49%);
+      border-radius: 5px;
+      font-size: 16px;
+      color: hsl(249, 10%, 26%);
+      width: 500px;
+      transition: 0.3s;
+    
+
+    }
+
+    input:focus {
+      border-color: hsl(154, 59%, 51%);
+      box-shadow: 0 0 5px rgba(88, 180, 196, 0.5);
+      outline: none;
+    }
+
+   button {
+      background-color: hsl(154, 59%, 51%);
+      border: none;
+      border-radius: 5px;
+      padding: 15px;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: hsl(154, 59%, 61%);
+    }
+    .bottom-text {
+  margin-top: 20px;
+  text-align: center; 
+  font-size: 14px;
+  line-height: 1.5; 
+  color: hsl(246, 25%, 77%);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bottom-text span {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+      footer {
+      
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+  #container {
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .first-phase h1 {
+    font-size: 1.8rem;
+  }
+
+  .box2 {
+    padding: 20px;
+  }
+}
+
+
+     @media (max-width: 900px) {
+      section#container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .first-phase h1 {
+        font-size: 2rem;
+      }
+
+      .box2 {
+        max-width: 100%;
+      }
+    }
+
+      .attribution {
+      font-size: 11px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      text-decoration: none;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <section id="container">
+    <div class="first-phase">
+  <div class="headline">
+    <h1>Learn to code by watching others</h1>
+  </div>
+
+  <div class="content">
+    <p> See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+  but understanding how developers think is invaluable. </p>
+  </div>
+  </div>
+
+  <div class="second-phase">
+
+  <div class="box1">
+    <p> <strong> Try it free 7 days</strong> then $20/mo. thereafter </p>
+  </div>
+
+  <div class="box2">
+    <form>
+      <input type="text" id="fname" name="fname" placeholder="First Name" required>
+      <br>
+      <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+      <br>
+      <input type="email" id="email" name="email" placeholder="Email Address" required>
+      <br>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <br>
+      <button style="background-color:  hsl(154, 59%, 51%);">CLAIM YOUR FREE TRIAL</button>
+    </form>
+    <P class="bottom-text"> By clicking the button, you are agreeing to our <span style="color: hsl(0, 100%, 74%);" >Terms and Services</span> 
+</P>
+  </div>
+  </div>
+
+ 
+
+ 
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">keerthana</a>.
+    </p>
+  </footer>
+  </section>  
+</body>
+</html>
